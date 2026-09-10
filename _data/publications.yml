@@ -32,6 +32,20 @@ main:
     notes: Oral Presentation
     image: ./assets/img/acmmm2025_hca.png
 
+  - title: Text-Visible/Infrared Person Retrieval - Attribute-Guided Feature Decoupling and Collaborative Alignment and a Unified Benchmark
+    authors: Chenglong Li, Ziheng Xu, <strong>Yifei Deng</strong>, Aihua Zheng, Jin Tang
+    conference_short: TIP
+    conference: IEEE Transactions on Image Processing <strong>(TIP)</strong>, 2026.
+    pdf: https://doi.org/10.1109/TIP.2026.3691012
+    image: ./assets/img/tip2026_acanet.png
+
+  - title: Dual-Teacher Interactive Knowledge Distillation Network for Text-to-Visible & Infrared Person Retrieval
+    authors: Chenglong Li, Zhengyu Chen, <strong>Yifei Deng</strong>, Aihua Zheng
+    conference_short: AAAI
+    conference: AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong>, 2026.
+    pdf: https://ojs.aaai.org/index.php/AAAI/article/download/37527/41489
+    image: ./assets/img/aaai2026_dikdnet.png
+
   - title: Collaborative License Plate Recognition via Association Enhancement Network With Auxiliary Learning and a Unified Benchmark
     authors: <strong>Yifei Deng</strong>, Guohao Wang, Chenglong Li, Wei Wang, Cheng Zhang, Jin Tang
     conference_short: TMM
