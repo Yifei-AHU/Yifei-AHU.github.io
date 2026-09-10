@@ -19,8 +19,8 @@ layout: homepage
 
 - **[Feb. 2026]** Our paper about Aerial Cross-modal Person Retrieval is accepted to **CVPR 2026**.
 - **[May. 2026]** Our paper about Cross-modal Person Retrieval is published in **TIFS 2026**.
-- **[Mar. 2026]** Our paper about Cross-modal Person Retrieval is published in **Information Fusion 2026**.
-- **[Oct. 2025]** I gave an oral presentation at **ACM Multimedia 2025** in Dublin, Ireland.
+- **[Mar. 2026]** Our paper about Cross-modal Person Retrieval is published in **INFFUS 2026**.
+- **[Oct. 2025]** I gave an oral presentation at **ACM MM 2025** in Dublin, Ireland.
 - **[Oct. 2025]** Our paper about Cross-modal Person Retrieval is published at **ACM MM 2025**.
 
 {% include_relative _includes/publications.md %}
