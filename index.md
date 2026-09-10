@@ -17,10 +17,12 @@ layout: homepage
 
 ## News
 
-- **[Feb. 2020]** Our paper about incremental learning is accepted to CVPR 2020.
-- **[Feb. 2020]** We will host the ACM Multimedia Asia 2020 conference in Singapore!
-- **[Sept. 2019]** Our paper about few-shot learning is accepted to NeurIPS 2019.
-- **[Mar. 2019]** Our paper about few-shot learning is accepted to CVPR 2019.
+- **[Feb. 2026]** Our paper on Low-Altitude Cross-modal Person Retrieval is accepted to **CVPR 2026**.
+- **[May. 2026]** Our paper on Cross-modal Person Retrieval is published in **TIFS**.
+- **[May 2026]** Our paper on Cross-modal Person Retrieval is published in **TIP**.
+- **[Mar. 2026]** Our paper on Cross-modal Person Retrieval is published in **Information Fusion**.
+- **[Mar. 2026]** Our paper on Cross-modal Person Retrieval is published at **AAAI 2026**.
+- **[Oct. 2025]** Our paper on Cross-modal Person Retrieval is published at **ACM MM 2025**.
 
 {% include_relative _includes/publications.md %}
 
