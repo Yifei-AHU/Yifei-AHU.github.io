@@ -1,22 +1,40 @@
 main:
 
-  - title: Continual Learning for Abdominal Multi-Organ and Tumor Segmentation
-    authors: Yixiao Zhang, Xinyi Li, Huimiao Chen, Alan Yuille, <strong>Yaoyao Liu*</strong>, Zongwei Zhou* (*Corresponding authors)
-    conference_short: MICCAI
-    conference: International Conference on Medical Image Computing and Computer-Assisted Intervention <strong>(MICCAI)</strong>, 2023.
-    pdf: https://arxiv.org/pdf/2306.00988.pdf
-    code: https://github.com/MrGiovanni/ContinualLearning
-    bibtex: https://bib.yliu.me/MICCAI23.txt
-    image: ./assets/img/teaser_example_2.png
-    notes: Early Accept
-
-  - title: "Mnemonics Training: Multi-Class Incremental Learning without Forgetting"
-    authors: <strong>Yaoyao Liu</strong>, Yuting Su, An-An Liu, Bernt Schiele, Qianru Sun
+  - title: Cross-modal Fuzzy Alignment Network for Text-Aerial Person Retrieval and A Large-scale Benchmark
+    authors: <strong>Yifei Deng</strong>, Chenglong Li, Yuyang Zhang, Guyue Hu, Jin Tang
     conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2020.
-    pdf: https://arxiv.org/pdf/2002.10211.pdf
-    code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    bibtex: https://class-il.mpi-inf.mpg.de/mnemonics/
+    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2026.
+    pdf: https://openaccess.thecvf.com/content/CVPR2026/papers/Deng_Cross-modal_Fuzzy_Alignment_Network_for_Text-Aerial_Person_Retrieval_and_A_CVPR_2026_paper.pdf
+    code: https://github.com/Yifei-AHU/AERI-PEDES
+    image: ./assets/img/cvpr2026_cfan.png
+
+  - title: Cross-Modal Person Retrieval With One-to-Many Relation Modeling
+    authors: <strong>Yifei Deng</strong>, Ziheng Xu, Chenglong Li, Guyue Hu, Jin Tang
+    conference_short: TIFS
+    conference: IEEE Transactions on Information Forensics and Security <strong>(TIFS)</strong>, 2026.
+    pdf: https://doi.org/10.1109/TIFS.2026.3689714
+    code: https://github.com/Yifei-AHU/OMRE
+    image: ./assets/img/tifs2026_omre.png
+
+  - title: Decoupled Cross-Modal Alignment Network for Text-RGBT Person Retrieval and A High-Quality Benchmark
+    authors: <strong>Yifei Deng</strong>, Chenglong Li, Zhengyu Chen, Ziheng Xu, Jin Tang
+    conference_short: INFFUS
+    conference: Information Fusion <strong>(INFFUS)</strong>, 2026.
+    pdf: https://doi.org/10.1016/j.inffus.2025.103948
+    code: https://github.com/Yifei-AHU/RGBT-PEDE
+    image: ./assets/img/inffus2026_dcalign.png
+
+  - title: Learning Hierarchical Cross-modal Association with Intra-modal Context for Text-Image Person Retrieval
+    authors: <strong>Yifei Deng</strong>, Chenglong Li, Futian Wang, Jin Tang
+    conference_short: ACM MM
+    conference: ACM International Conference on Multimedia <strong>(ACM MM)</strong>, 2025.
+    pdf: https://doi.org/10.1145/3746027.3754721
     notes: Oral Presentation
-    image: ./assets/img/teaser_example.png
+    image: ./assets/img/acmmm2025_hca.png
+
+  - title: Collaborative License Plate Recognition via Association Enhancement Network With Auxiliary Learning and a Unified Benchmark
+    authors: <strong>Yifei Deng</strong>, Guohao Wang, Chenglong Li, Wei Wang, Cheng Zhang, Jin Tang
+    conference_short: TMM
+    conference: IEEE Transactions on Multimedia <strong>(TMM)</strong>, 2024.
+    pdf: https://doi.org/10.1109/TMM.2024.3452982
+    image: ./assets/img/tmm2024_clpr.png
