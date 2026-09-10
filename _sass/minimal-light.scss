@@ -215,17 +215,18 @@ papertitle {
       }
 
       .image.avatar img {
-          border-radius: 50%;
-          width: 170px;
-          height: 170px;
+          width: 180px;
+          height: 230px;
           object-fit: cover;
           object-position: center;
+          border-radius: 8px;
           padding: 0;
+          display: block;
     }
 
     #header .image.avatar {
       margin: 0 0 1em 0;
-      width: 10.00em;
+      width: auto;
     }
 
 h3, h4, h5, h6 {
