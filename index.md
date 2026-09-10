@@ -13,16 +13,15 @@ layout: homepage
 ## Research Interests
 
 - **Low-Altitude Multi-modal Visual Perception:** Cross-modal Person Retrieval, RGBT Visual Grounding, RGBT Semantic Segmentation
-- **Embodied AI:** Low-Altitude Embodied Target Search, Embodied Navigation
+- **Embodied AI:** Low-Altitude Embodied Search, Embodied Navigation
 
 ## News
 
-- **[Feb. 2026]** Our paper on Low-Altitude Cross-modal Person Retrieval is accepted to **CVPR 2026**.
-- **[May. 2026]** Our paper on Cross-modal Person Retrieval is published in **TIFS**.
-- **[May 2026]** Our paper on Cross-modal Person Retrieval is published in **TIP**.
-- **[Mar. 2026]** Our paper on Cross-modal Person Retrieval is published in **Information Fusion**.
-- **[Mar. 2026]** Our paper on Cross-modal Person Retrieval is published at **AAAI 2026**.
-- **[Oct. 2025]** Our paper on Cross-modal Person Retrieval is published at **ACM MM 2025**.
+- **[Feb. 2026]** Our paper about Low-Altitude Cross-modal Person Retrieval is accepted to **CVPR 2026**.
+- **[May. 2026]** Our paper about Cross-modal Person Retrieval is published in **TIFS**.
+- **[Mar. 2026]** Our paper about Cross-modal Person Retrieval is published in **Information Fusion**.
+- **[Oct. 2025]** I gave an oral presentation at **ACM Multimedia 2025 (ACM MM 2025)** in Dublin, Ireland.
+- **[Oct. 2025]** Our paper about Cross-modal Person Retrieval is published at **ACM MM 2025**.
 
 {% include_relative _includes/publications.md %}
 
