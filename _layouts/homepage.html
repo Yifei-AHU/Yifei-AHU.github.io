@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
+
   <head>
+
     <title>{{ site.title }} | {{ site.affiliation }}</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
+
+    <meta
+      name="description"
+      content="{{ site.description }}"
+    >
+
 
     {% if site.keywords %}
-    <meta name="keywords" content="{{ site.keywords }}">
+
+    <meta
+      name="keywords"
+      content="{{ site.keywords }}"
+    >
+
     {% endif %}
 
+
     {% if site.canonical %}
-    <link rel="canonical" href="{{ site.canonical }}"/>
+
+    <link
+      rel="canonical"
+      href="{{ site.canonical }}"
+    />
+
     {% endif %}
+
+
+
+    <!-- =========================================================
+         Favicon
+         ========================================================= -->
 
     <link
       rel="icon"
@@ -35,7 +59,12 @@
       type="application/javascript">
     </script>
 
-    <!-- Academicons -->
+
+
+    <!-- =========================================================
+         Academicons
+         ========================================================= -->
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css"
@@ -43,7 +72,12 @@
       crossorigin="anonymous"
     >
 
-    <!-- Font Awesome -->
+
+
+    <!-- =========================================================
+         Font Awesome
+         ========================================================= -->
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -52,51 +86,104 @@
       referrerpolicy="no-referrer"
     />
 
+
+
+    <!-- =========================================================
+         Fonts
+         ========================================================= -->
+
     {% if site.font == "Sans Serif" %}
-    <link rel="stylesheet" href="./assets/css/font_sans_serif.css">
+
+    <link
+      rel="stylesheet"
+      href="./assets/css/font_sans_serif.css"
+    >
+
     {% else %}
-    <link rel="stylesheet" href="./assets/css/font.css">
+
+    <link
+      rel="stylesheet"
+      href="./assets/css/font.css"
+    >
+
     {% endif %}
 
+
+
+    <!-- =========================================================
+         Main Styles
+         ========================================================= -->
+
     {% if site.auto_dark_mode %}
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/publications.css">
+
+    <link
+      rel="stylesheet"
+      href="./assets/css/style.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="./assets/css/publications.css"
+    >
+
     {% else %}
-    <link rel="stylesheet" href="./assets/css/style-no-dark-mode.css">
-    <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
+
+    <link
+      rel="stylesheet"
+      href="./assets/css/style-no-dark-mode.css"
+    >
+
+    <link
+      rel="stylesheet"
+      href="./assets/css/publications-no-dark-mode.css"
+    >
+
     {% endif %}
+
 
 
     <!-- =========================================================
          WeChat Modal + Visitor Statistics Style
          ========================================================= -->
+
     <style>
 
-      /* =========================
+      /* =======================================================
          WeChat Modal
-         ========================= */
+         ======================================================= */
 
       .wechat-modal {
+
         display: none;
+
         position: fixed;
+
         z-index: 9999;
 
         left: 0;
+
         top: 0;
 
         width: 100%;
+
         height: 100%;
 
         background-color: rgba(0, 0, 0, 0.55);
 
         align-items: center;
+
         justify-content: center;
+
       }
 
+
+
       .wechat-modal-content {
+
         position: relative;
 
         width: 300px;
+
         max-width: 80%;
 
         padding: 28px 28px 22px 28px;
@@ -107,41 +194,65 @@
 
         border-radius: 10px;
 
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.28);
+        box-shadow:
+          0 4px 24px
+          rgba(0, 0, 0, 0.28);
+
       }
 
+
+
       .wechat-modal-content h3 {
+
         margin-top: 0;
+
         margin-bottom: 18px;
 
         color: #003e74;
+
       }
 
+
+
       .wechat-qr {
+
         display: block;
 
         width: 230px;
+
         max-width: 100%;
+
         height: auto;
 
-        margin: 0 auto 15px auto;
+        margin:
+          0 auto 15px auto;
+
       }
 
+
+
       .wechat-modal-content p {
+
         margin: 0;
 
         font-size: 14px;
 
         color: #666666;
+
       }
 
+
+
       .wechat-close {
+
         position: absolute;
 
         top: 6px;
+
         right: 12px;
 
         font-size: 28px;
+
         font-weight: bold;
 
         color: #777777;
@@ -149,108 +260,176 @@
         cursor: pointer;
 
         line-height: 1;
+
       }
+
+
 
       .wechat-close:hover {
+
         color: #000000;
+
       }
+
+
 
       #wechat-button {
+
         cursor: pointer;
+
       }
 
 
-      /* =========================
+
+      /* =======================================================
          Visitor Statistics
-         ========================= */
+         ======================================================= */
 
       .site-stats {
+
         display: flex;
+
         align-items: center;
+
         justify-content: center;
 
         gap: 8px;
 
         margin-top: 12px;
+
         margin-bottom: 2px;
 
         font-size: 0.95rem;
 
         color: #666666;
+
       }
+
+
 
       .site-stats .stat-item {
+
         white-space: nowrap;
+
       }
+
+
 
       .site-stats .stat-label {
+
         color: #777777;
+
       }
 
+
+
       .site-stats .stat-value {
+
         margin-left: 3px;
 
         font-weight: 600;
 
         color: #003e74;
+
       }
+
+
 
       .site-stats .stat-divider {
+
         color: #aaaaaa;
+
       }
 
 
-      /* =========================
-         Dark mode support
-         ========================= */
+
+      /* =======================================================
+         Dark Mode
+         ======================================================= */
 
       @media (prefers-color-scheme: dark) {
 
         .wechat-modal-content {
+
           background-color: #ffffff;
+
         }
+
 
         .wechat-modal-content h3 {
+
           color: #003e74;
+
         }
 
+
         .wechat-modal-content p {
+
           color: #666666;
+
         }
 
       }
 
 
-      /* =========================
+
+      /* =======================================================
          Mobile
-         ========================= */
+         ======================================================= */
 
       @media screen and (max-width: 480px) {
 
         .wechat-modal-content {
+
           width: 260px;
-          padding: 24px 20px 20px 20px;
+
+          padding:
+            24px 20px 20px 20px;
+
         }
+
 
         .wechat-qr {
+
           width: 200px;
+
         }
 
+
         .site-stats {
-          font-size: 0.78rem;
+
+          font-size: 0.82rem;
+
           gap: 6px;
+
         }
 
       }
 
     </style>
 
+
+
+    <!-- =========================================================
+         Statable Analytics
+         Used for Visitor Map
+         ========================================================= -->
+
+    <script
+      src="https://statable.com/js/3338190/s.js"
+      defer>
+    </script>
+
+
   </head>
+
 
 
   <body>
 
+
     <div class="wrapper">
+
 
 
       <!-- =========================================================
@@ -259,50 +438,84 @@
 
       <header>
 
+
+
         {% if site.avatar %}
+
         <a class="image avatar">
+
           <img
             src="{{ site.avatar }}"
             alt="Yifei Deng"
           >
+
         </a>
+
         {% endif %}
 
 
-        <h1>{{ site.title }}</h1>
+
+        <h1>
+
+          {{ site.title }}
+
+        </h1>
+
 
 
         {% if site.position %}
-        <position style="font-size:1.10rem;">
+
+        <position
+          style="font-size:1.10rem;"
+        >
+
           {{ site.position }}
+
         </position>
+
         <br>
+
         {% endif %}
 
 
+
         {% if site.affiliation %}
+
         <a
           href="{{ site.affiliation_link }}"
           target="_blank"
           rel="noopener"
         >
+
           <autocolor>
+
             {{ site.affiliation }}
+
           </autocolor>
+
         </a>
+
         <br>
+
         {% endif %}
+
 
 
         {% if site.email %}
+
         <email>
+
           {{ site.email }}
+
         </email>
+
         {% endif %}
 
 
+
         <br>
         <br>
+
 
 
         <!-- =======================================================
@@ -310,6 +523,7 @@
              ======================================================= -->
 
         <div class="social-icons">
+
 
 
           <!-- Google Scholar -->
@@ -324,10 +538,12 @@
             title="Google Scholar"
             aria-label="Google Scholar"
           >
+
             <i
               class="ai ai-google-scholar"
               style="font-size:1.2rem"
             ></i>
+
           </a>
 
           {% endif %}
@@ -346,10 +562,12 @@
             title="CV"
             aria-label="CV"
           >
+
             <i
               class="ai ai-cv"
               style="font-size:1.3rem"
             ></i>
+
           </a>
 
           {% endif %}
@@ -368,7 +586,11 @@
             title="GitHub"
             aria-label="GitHub"
           >
-            <i class="fab fa-github"></i>
+
+            <i
+              class="fab fa-github"
+            ></i>
+
           </a>
 
           {% endif %}
@@ -386,7 +608,11 @@
             title="WeChat"
             aria-label="WeChat"
           >
-            <i class="fab fa-weixin"></i>
+
+            <i
+              class="fab fa-weixin"
+            ></i>
+
           </a>
 
           {% endif %}
@@ -405,7 +631,11 @@
             title="LinkedIn"
             aria-label="LinkedIn"
           >
-            <i class="fab fa-linkedin"></i>
+
+            <i
+              class="fab fa-linkedin"
+            ></i>
+
           </a>
 
           {% endif %}
@@ -424,13 +654,18 @@
             title="X"
             aria-label="X"
           >
-            <i class="fab fa-x-twitter"></i>
+
+            <i
+              class="fab fa-x-twitter"
+            ></i>
+
           </a>
 
           {% endif %}
 
 
         </div>
+
 
 
         <!-- =======================================================
@@ -441,50 +676,67 @@
 
         <div class="site-stats">
 
+
           <span class="stat-item">
 
             <span class="stat-label">
+
               Today
+
             </span>
 
             <span
               id="gc-today"
               class="stat-value"
             >
+
               --
+
             </span>
 
           </span>
 
 
+
           <span class="stat-divider">
+
             ·
+
           </span>
+
 
 
           <span class="stat-item">
 
             <span class="stat-label">
+
               Total
+
             </span>
 
             <span
               id="gc-total"
               class="stat-value"
             >
+
               --
+
             </span>
 
           </span>
+
 
         </div>
 
         {% endif %}
 
 
+
         <br>
 
+
       </header>
+
 
 
 
@@ -494,9 +746,12 @@
 
       <section>
 
+
         {{ content }}
 
+
         <br>
+
 
 
         {% if site.enable_footnote %}
@@ -512,7 +767,9 @@
               target="_blank"
               rel="noopener"
             >
+
               Minimal Light
+
             </a>
 
             theme.
@@ -527,7 +784,10 @@
       </section>
 
 
+
+
       <footer>
+
       </footer>
 
 
@@ -541,6 +801,7 @@
 
     {% if site.wechat_qr %}
 
+
     <div
       id="wechat-modal"
       class="wechat-modal"
@@ -549,7 +810,9 @@
       aria-labelledby="wechat-modal-title"
     >
 
+
       <div class="wechat-modal-content">
+
 
 
         <!-- Close Button -->
@@ -560,15 +823,23 @@
           aria-label="Close"
           title="Close"
         >
+
           &times;
+
         </span>
+
 
 
         <!-- Title -->
 
-        <h3 id="wechat-modal-title">
+        <h3
+          id="wechat-modal-title"
+        >
+
           WeChat
+
         </h3>
+
 
 
         <!-- QR Code -->
@@ -580,18 +851,24 @@
         >
 
 
+
         <!-- Description -->
 
         <p>
+
           Scan the QR code to add me on WeChat.
+
         </p>
 
 
       </div>
 
+
     </div>
 
+
     {% endif %}
+
 
 
 
@@ -605,11 +882,13 @@
 
 
 
+
     <!-- =========================================================
          WeChat Modal Script
          ========================================================= -->
 
     {% if site.wechat_qr %}
+
 
     <script>
 
@@ -617,20 +896,24 @@
         "DOMContentLoaded",
         function () {
 
+
           const wechatButton =
             document.getElementById(
               "wechat-button"
             );
+
 
           const wechatModal =
             document.getElementById(
               "wechat-modal"
             );
 
+
           const wechatClose =
             document.getElementById(
               "wechat-close"
             );
+
 
 
           if (
@@ -640,76 +923,81 @@
           ) {
 
 
-            /* -------------------------
-               Open modal
-               ------------------------- */
+
+            /* Open modal */
 
             wechatButton.addEventListener(
               "click",
               function () {
 
+
                 wechatModal.style.display =
                   "flex";
 
+
                 document.body.style.overflow =
                   "hidden";
+
 
               }
             );
 
 
 
-            /* -------------------------
-               Close with ×
-               ------------------------- */
+            /* Close with X */
 
             wechatClose.addEventListener(
               "click",
               function () {
 
+
                 wechatModal.style.display =
                   "none";
 
+
                 document.body.style.overflow =
                   "";
+
 
               }
             );
 
 
 
-            /* -------------------------
-               Close by clicking background
-               ------------------------- */
+            /* Close when clicking background */
 
             wechatModal.addEventListener(
               "click",
               function (event) {
 
+
                 if (
                   event.target === wechatModal
                 ) {
 
+
                   wechatModal.style.display =
                     "none";
+
 
                   document.body.style.overflow =
                     "";
 
+
                 }
+
 
               }
             );
 
 
 
-            /* -------------------------
-               Close with Escape
-               ------------------------- */
+            /* Close with ESC */
 
             document.addEventListener(
               "keydown",
               function (event) {
+
 
                 if (
                   event.key === "Escape" &&
@@ -717,25 +1005,33 @@
                     "flex"
                 ) {
 
+
                   wechatModal.style.display =
                     "none";
+
 
                   document.body.style.overflow =
                     "";
 
+
                 }
+
 
               }
             );
 
+
           }
+
 
         }
       );
 
     </script>
 
+
     {% endif %}
+
 
 
 
@@ -745,11 +1041,14 @@
 
     {% if site.goatcounter_code %}
 
+
     <!--
-      This script records every page view.
+      Records page views.
+
       Do NOT add another GoatCounter count.js elsewhere,
       otherwise one visit may be counted twice.
     -->
+
 
     <script
       data-goatcounter="https://{{ site.goatcounter_code }}.goatcounter.com/count"
@@ -759,15 +1058,18 @@
 
 
 
+
     <!-- =========================================================
-         GoatCounter Today / Total Display
+         GoatCounter Today / Total
          ========================================================= -->
 
     <script>
 
+
       document.addEventListener(
         "DOMContentLoaded",
         function () {
+
 
 
           const todayElement =
@@ -775,18 +1077,23 @@
               "gc-today"
             );
 
+
           const totalElement =
             document.getElementById(
               "gc-total"
             );
 
 
+
           if (
             !todayElement ||
             !totalElement
           ) {
+
             return;
+
           }
+
 
 
           const counterBase =
@@ -794,10 +1101,10 @@
 
 
 
-          /* ======================================
-             Get current date
-             YYYY-MM-DD
-             ====================================== */
+          /* =====================================================
+             Get today's date
+             ===================================================== */
+
 
           const now =
             new Date();
@@ -834,59 +1141,69 @@
 
 
 
-          /* ======================================
-             Get total page views
-             ====================================== */
+          /* =====================================================
+             Total visits
+             ===================================================== */
+
 
           fetch(
             counterBase +
             "TOTAL.json"
           )
 
-            .then(
-              function (response) {
+          .then(
+            function (response) {
 
-                if (!response.ok) {
 
-                  throw new Error(
-                    "Failed to load total visits"
-                  );
+              if (!response.ok) {
 
-                }
-
-                return response.json();
-
-              }
-            )
-
-            .then(
-              function (data) {
-
-                totalElement.textContent =
-                  data.count || "0";
-
-              }
-            )
-
-            .catch(
-              function (error) {
-
-                console.error(
-                  "GoatCounter total error:",
-                  error
+                throw new Error(
+                  "Failed to load total visits"
                 );
 
-                totalElement.textContent =
-                  "--";
-
               }
-            );
+
+
+              return response.json();
+
+
+            }
+          )
+
+          .then(
+            function (data) {
+
+
+              totalElement.textContent =
+                data.count || "0";
+
+
+            }
+          )
+
+          .catch(
+            function (error) {
+
+
+              console.error(
+                "GoatCounter total error:",
+                error
+              );
+
+
+              totalElement.textContent =
+                "--";
+
+
+            }
+          );
 
 
 
-          /* ======================================
-             Get today's page views
-             ====================================== */
+          /* =====================================================
+             Today's visits
+             ===================================================== */
+
 
           fetch(
             counterBase +
@@ -894,52 +1211,63 @@
             today
           )
 
-            .then(
-              function (response) {
+          .then(
+            function (response) {
 
-                if (!response.ok) {
 
-                  throw new Error(
-                    "Failed to load today's visits"
-                  );
+              if (!response.ok) {
 
-                }
-
-                return response.json();
-
-              }
-            )
-
-            .then(
-              function (data) {
-
-                todayElement.textContent =
-                  data.count || "0";
-
-              }
-            )
-
-            .catch(
-              function (error) {
-
-                console.error(
-                  "GoatCounter today error:",
-                  error
+                throw new Error(
+                  "Failed to load today's visits"
                 );
 
-                todayElement.textContent =
-                  "--";
-
               }
-            );
+
+
+              return response.json();
+
+
+            }
+          )
+
+          .then(
+            function (data) {
+
+
+              todayElement.textContent =
+                data.count || "0";
+
+
+            }
+          )
+
+          .catch(
+            function (error) {
+
+
+              console.error(
+                "GoatCounter today error:",
+                error
+              );
+
+
+              todayElement.textContent =
+                "--";
+
+
+            }
+          );
 
 
         }
       );
 
+
     </script>
 
+
     {% endif %}
+
 
 
 
@@ -949,32 +1277,43 @@
 
     {% if site.google_analytics %}
 
+
     <script>
+
 
       (function(i,s,o,g,r,a,m){
 
+
         i['GoogleAnalyticsObject']=r;
+
 
         i[r]=i[r]||function(){
 
-          (i[r].q=i[r].q||[]).push(arguments)
+          (i[r].q=i[r].q||[])
+            .push(arguments)
 
         },
+
 
         i[r].l=1*new Date();
 
 
         a=s.createElement(o),
 
+
         m=s.getElementsByTagName(o)[0];
 
 
         a.async=1;
 
+
         a.src=g;
 
 
-        m.parentNode.insertBefore(a,m);
+        m.parentNode.insertBefore(
+          a,
+          m
+        );
 
 
       })(
@@ -986,21 +1325,26 @@
       );
 
 
+
       ga(
         'create',
         '{{ site.google_analytics }}',
         'auto'
       );
 
+
       ga(
         'send',
         'pageview'
       );
 
+
     </script>
+
 
     {% endif %}
 
 
   </body>
+
 </html>
