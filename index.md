@@ -26,3 +26,20 @@ layout: homepage
 {% include_relative _includes/publications.md %}
 
 {% include_relative _includes/services.md %}
+
+## Visitors
+
+<div class="visitor-map-container">
+
+<script
+  src="https://statable.com/js/77r8FBAff1/mw.js"
+  data-id="3338190"
+  data-period="30d"
+  data-primary-color="#E53935"
+  data-ocean-color="#89BCDBFF"
+  data-outer-radius="16"
+  data-display-mode="cities"
+  data-show-stats="false">
+</script>
+
+</div>
