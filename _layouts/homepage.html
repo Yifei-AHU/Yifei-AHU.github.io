@@ -66,10 +66,16 @@
     <link rel="stylesheet" href="./assets/css/publications-no-dark-mode.css">
     {% endif %}
 
+
     <!-- =========================================================
-         WeChat Modal Style
+         WeChat Modal + Visitor Statistics Style
          ========================================================= -->
     <style>
+
+      /* =========================
+         WeChat Modal
+         ========================= */
+
       .wechat-modal {
         display: none;
         position: fixed;
@@ -153,8 +159,53 @@
         cursor: pointer;
       }
 
-      /* Dark mode support */
+
+      /* =========================
+         Visitor Statistics
+         ========================= */
+
+      .site-stats {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+
+        margin-top: 12px;
+        margin-bottom: 2px;
+
+        font-size: 0.82rem;
+
+        color: #666666;
+      }
+
+      .site-stats .stat-item {
+        white-space: nowrap;
+      }
+
+      .site-stats .stat-label {
+        color: #777777;
+      }
+
+      .site-stats .stat-value {
+        margin-left: 3px;
+
+        font-weight: 600;
+
+        color: #003e74;
+      }
+
+      .site-stats .stat-divider {
+        color: #aaaaaa;
+      }
+
+
+      /* =========================
+         Dark mode support
+         ========================= */
+
       @media (prefers-color-scheme: dark) {
+
         .wechat-modal-content {
           background-color: #ffffff;
         }
@@ -166,10 +217,16 @@
         .wechat-modal-content p {
           color: #666666;
         }
+
       }
 
-      /* Mobile */
+
+      /* =========================
+         Mobile
+         ========================= */
+
       @media screen and (max-width: 480px) {
+
         .wechat-modal-content {
           width: 260px;
           padding: 24px 20px 20px 20px;
@@ -178,27 +235,42 @@
         .wechat-qr {
           width: 200px;
         }
+
+        .site-stats {
+          font-size: 0.78rem;
+          gap: 6px;
+        }
+
       }
+
     </style>
 
   </head>
+
 
   <body>
 
     <div class="wrapper">
 
+
       <!-- =========================================================
            Left Profile
            ========================================================= -->
+
       <header>
 
         {% if site.avatar %}
         <a class="image avatar">
-          <img src="{{ site.avatar }}" alt="Yifei Deng">
+          <img
+            src="{{ site.avatar }}"
+            alt="Yifei Deng"
+          >
         </a>
         {% endif %}
 
+
         <h1>{{ site.title }}</h1>
+
 
         {% if site.position %}
         <position style="font-size:1.10rem;">
@@ -207,20 +279,27 @@
         <br>
         {% endif %}
 
+
         {% if site.affiliation %}
         <a
           href="{{ site.affiliation_link }}"
           target="_blank"
           rel="noopener"
         >
-          <autocolor>{{ site.affiliation }}</autocolor>
+          <autocolor>
+            {{ site.affiliation }}
+          </autocolor>
         </a>
         <br>
         {% endif %}
 
+
         {% if site.email %}
-        <email>{{ site.email }}</email>
+        <email>
+          {{ site.email }}
+        </email>
         {% endif %}
+
 
         <br>
         <br>
@@ -229,10 +308,14 @@
         <!-- =======================================================
              Social Icons
              ======================================================= -->
+
         <div class="social-icons">
 
+
           <!-- Google Scholar -->
+
           {% if site.google_scholar %}
+
           <a
             style="margin: 0 5px 0 0"
             href="{{ site.google_scholar }}"
@@ -243,14 +326,18 @@
           >
             <i
               class="ai ai-google-scholar"
-              style="font-size:1.2rem">
-            </i>
+              style="font-size:1.2rem"
+            ></i>
           </a>
+
           {% endif %}
 
 
+
           <!-- CV -->
+
           {% if site.cv_link %}
+
           <a
             style="margin: 0 5px 0 0"
             href="{{ site.cv_link }}"
@@ -261,14 +348,18 @@
           >
             <i
               class="ai ai-cv"
-              style="font-size:1.3rem">
-            </i>
+              style="font-size:1.3rem"
+            ></i>
           </a>
+
           {% endif %}
 
 
+
           <!-- GitHub -->
+
           {% if site.github_link %}
+
           <a
             style="margin: 0 5px 0 0"
             href="{{ site.github_link }}"
@@ -279,11 +370,15 @@
           >
             <i class="fab fa-github"></i>
           </a>
+
           {% endif %}
 
 
+
           <!-- WeChat -->
+
           {% if site.wechat_qr %}
+
           <a
             id="wechat-button"
             style="margin: 0 5px 0 0"
@@ -293,11 +388,15 @@
           >
             <i class="fab fa-weixin"></i>
           </a>
+
           {% endif %}
 
 
+
           <!-- LinkedIn -->
+
           {% if site.linkedin %}
+
           <a
             style="margin: 0 5px 0 0"
             href="{{ site.linkedin }}"
@@ -308,11 +407,15 @@
           >
             <i class="fab fa-linkedin"></i>
           </a>
+
           {% endif %}
 
 
+
           <!-- X / Twitter -->
+
           {% if site.twitter %}
+
           <a
             style="margin: 0"
             href="{{ site.twitter }}"
@@ -323,28 +426,87 @@
           >
             <i class="fab fa-x-twitter"></i>
           </a>
+
           {% endif %}
 
+
         </div>
+
+
+        <!-- =======================================================
+             Visitor Statistics
+             ======================================================= -->
+
+        {% if site.goatcounter_code %}
+
+        <div class="site-stats">
+
+          <span class="stat-item">
+
+            <span class="stat-label">
+              Today
+            </span>
+
+            <span
+              id="gc-today"
+              class="stat-value"
+            >
+              --
+            </span>
+
+          </span>
+
+
+          <span class="stat-divider">
+            ·
+          </span>
+
+
+          <span class="stat-item">
+
+            <span class="stat-label">
+              Total
+            </span>
+
+            <span
+              id="gc-total"
+              class="stat-value"
+            >
+              --
+            </span>
+
+          </span>
+
+        </div>
+
+        {% endif %}
+
 
         <br>
 
       </header>
 
 
+
       <!-- =========================================================
            Main Content
            ========================================================= -->
+
       <section>
 
         {{ content }}
 
         <br>
 
+
         {% if site.enable_footnote %}
+
         <p>
+
           <small>
+
             Powered by Jekyll and
+
             <a
               href="https://github.com/yaoyao-liu/minimal-light"
               target="_blank"
@@ -352,10 +514,15 @@
             >
               Minimal Light
             </a>
+
             theme.
+
           </small>
+
         </p>
+
         {% endif %}
+
 
       </section>
 
@@ -363,12 +530,15 @@
       <footer>
       </footer>
 
+
     </div>
+
 
 
     <!-- =========================================================
          WeChat QR Modal
          ========================================================= -->
+
     {% if site.wechat_qr %}
 
     <div
@@ -381,7 +551,9 @@
 
       <div class="wechat-modal-content">
 
+
         <!-- Close Button -->
+
         <span
           id="wechat-close"
           class="wechat-close"
@@ -391,22 +563,29 @@
           &times;
         </span>
 
+
         <!-- Title -->
+
         <h3 id="wechat-modal-title">
           WeChat
         </h3>
 
+
         <!-- QR Code -->
+
         <img
           src="{{ site.wechat_qr | relative_url }}"
           alt="Yifei Deng WeChat QR Code"
           class="wechat-qr"
         >
 
+
         <!-- Description -->
+
         <p>
           Scan the QR code to add me on WeChat.
         </p>
+
 
       </div>
 
@@ -415,127 +594,413 @@
     {% endif %}
 
 
+
     <!-- =========================================================
          Basic Scripts
          ========================================================= -->
-    <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
+
+    <script
+      src="{{ "/assets/js/scale.fix.js" | relative_url }}">
+    </script>
+
 
 
     <!-- =========================================================
          WeChat Modal Script
          ========================================================= -->
+
     {% if site.wechat_qr %}
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
 
-        const wechatButton =
-          document.getElementById("wechat-button");
+      document.addEventListener(
+        "DOMContentLoaded",
+        function () {
 
-        const wechatModal =
-          document.getElementById("wechat-modal");
+          const wechatButton =
+            document.getElementById(
+              "wechat-button"
+            );
 
-        const wechatClose =
-          document.getElementById("wechat-close");
+          const wechatModal =
+            document.getElementById(
+              "wechat-modal"
+            );
 
-
-        if (wechatButton && wechatModal && wechatClose) {
-
-          // Open WeChat QR modal
-          wechatButton.addEventListener("click", function () {
-
-            wechatModal.style.display = "flex";
-
-            // Prevent background scrolling
-            document.body.style.overflow = "hidden";
-
-          });
+          const wechatClose =
+            document.getElementById(
+              "wechat-close"
+            );
 
 
-          // Close modal by clicking ×
-          wechatClose.addEventListener("click", function () {
-
-            wechatModal.style.display = "none";
-
-            document.body.style.overflow = "";
-
-          });
+          if (
+            wechatButton &&
+            wechatModal &&
+            wechatClose
+          ) {
 
 
-          // Close modal by clicking background
-          wechatModal.addEventListener("click", function (event) {
+            /* -------------------------
+               Open modal
+               ------------------------- */
 
-            if (event.target === wechatModal) {
+            wechatButton.addEventListener(
+              "click",
+              function () {
 
-              wechatModal.style.display = "none";
+                wechatModal.style.display =
+                  "flex";
 
-              document.body.style.overflow = "";
+                document.body.style.overflow =
+                  "hidden";
 
-            }
+              }
+            );
 
-          });
 
 
-          // Close modal by pressing Escape
-          document.addEventListener("keydown", function (event) {
+            /* -------------------------
+               Close with ×
+               ------------------------- */
 
-            if (
-              event.key === "Escape" &&
-              wechatModal.style.display === "flex"
-            ) {
+            wechatClose.addEventListener(
+              "click",
+              function () {
 
-              wechatModal.style.display = "none";
+                wechatModal.style.display =
+                  "none";
 
-              document.body.style.overflow = "";
+                document.body.style.overflow =
+                  "";
 
-            }
+              }
+            );
 
-          });
+
+
+            /* -------------------------
+               Close by clicking background
+               ------------------------- */
+
+            wechatModal.addEventListener(
+              "click",
+              function (event) {
+
+                if (
+                  event.target === wechatModal
+                ) {
+
+                  wechatModal.style.display =
+                    "none";
+
+                  document.body.style.overflow =
+                    "";
+
+                }
+
+              }
+            );
+
+
+
+            /* -------------------------
+               Close with Escape
+               ------------------------- */
+
+            document.addEventListener(
+              "keydown",
+              function (event) {
+
+                if (
+                  event.key === "Escape" &&
+                  wechatModal.style.display ===
+                    "flex"
+                ) {
+
+                  wechatModal.style.display =
+                    "none";
+
+                  document.body.style.overflow =
+                    "";
+
+                }
+
+              }
+            );
+
+          }
 
         }
+      );
 
-      });
     </script>
 
     {% endif %}
+
+
+
+    <!-- =========================================================
+         GoatCounter Analytics
+         ========================================================= -->
+
+    {% if site.goatcounter_code %}
+
+    <!--
+      This script records every page view.
+      Do NOT add another GoatCounter count.js elsewhere,
+      otherwise one visit may be counted twice.
+    -->
+
+    <script
+      data-goatcounter="https://{{ site.goatcounter_code }}.goatcounter.com/count"
+      async
+      src="https://gc.zgo.at/count.js">
+    </script>
+
+
+
+    <!-- =========================================================
+         GoatCounter Today / Total Display
+         ========================================================= -->
+
+    <script>
+
+      document.addEventListener(
+        "DOMContentLoaded",
+        function () {
+
+
+          const todayElement =
+            document.getElementById(
+              "gc-today"
+            );
+
+          const totalElement =
+            document.getElementById(
+              "gc-total"
+            );
+
+
+          if (
+            !todayElement ||
+            !totalElement
+          ) {
+            return;
+          }
+
+
+          const counterBase =
+            "https://{{ site.goatcounter_code }}.goatcounter.com/counter/";
+
+
+
+          /* ======================================
+             Get current date
+             YYYY-MM-DD
+             ====================================== */
+
+          const now =
+            new Date();
+
+
+          const year =
+            now.getFullYear();
+
+
+          const month =
+            String(
+              now.getMonth() + 1
+            ).padStart(
+              2,
+              "0"
+            );
+
+
+          const day =
+            String(
+              now.getDate()
+            ).padStart(
+              2,
+              "0"
+            );
+
+
+          const today =
+            year +
+            "-" +
+            month +
+            "-" +
+            day;
+
+
+
+          /* ======================================
+             Get total page views
+             ====================================== */
+
+          fetch(
+            counterBase +
+            "TOTAL.json"
+          )
+
+            .then(
+              function (response) {
+
+                if (!response.ok) {
+
+                  throw new Error(
+                    "Failed to load total visits"
+                  );
+
+                }
+
+                return response.json();
+
+              }
+            )
+
+            .then(
+              function (data) {
+
+                totalElement.textContent =
+                  data.count || "0";
+
+              }
+            )
+
+            .catch(
+              function (error) {
+
+                console.error(
+                  "GoatCounter total error:",
+                  error
+                );
+
+                totalElement.textContent =
+                  "--";
+
+              }
+            );
+
+
+
+          /* ======================================
+             Get today's page views
+             ====================================== */
+
+          fetch(
+            counterBase +
+            "TOTAL.json?start=" +
+            today
+          )
+
+            .then(
+              function (response) {
+
+                if (!response.ok) {
+
+                  throw new Error(
+                    "Failed to load today's visits"
+                  );
+
+                }
+
+                return response.json();
+
+              }
+            )
+
+            .then(
+              function (data) {
+
+                todayElement.textContent =
+                  data.count || "0";
+
+              }
+            )
+
+            .catch(
+              function (error) {
+
+                console.error(
+                  "GoatCounter today error:",
+                  error
+                );
+
+                todayElement.textContent =
+                  "--";
+
+              }
+            );
+
+
+        }
+      );
+
+    </script>
+
+    {% endif %}
+
 
 
     <!-- =========================================================
          Google Analytics
          ========================================================= -->
+
     {% if site.google_analytics %}
 
     <script>
+
       (function(i,s,o,g,r,a,m){
+
         i['GoogleAnalyticsObject']=r;
+
         i[r]=i[r]||function(){
+
           (i[r].q=i[r].q||[]).push(arguments)
+
         },
+
         i[r].l=1*new Date();
 
+
         a=s.createElement(o),
+
         m=s.getElementsByTagName(o)[0];
 
+
         a.async=1;
+
         a.src=g;
+
 
         m.parentNode.insertBefore(a,m);
 
-      })(window,document,'script',
-      'https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', '{{ site.google_analytics }}', 'auto');
-      ga('send', 'pageview');
+      })(
+        window,
+        document,
+        'script',
+        'https://www.google-analytics.com/analytics.js',
+        'ga'
+      );
+
+
+      ga(
+        'create',
+        '{{ site.google_analytics }}',
+        'auto'
+      );
+
+      ga(
+        'send',
+        'pageview'
+      );
+
     </script>
 
     {% endif %}
 
-    <!-- GoatCounter Analytics -->
-    <script
-       data-goatcounter="https://yifei-ahu.goatcounter.com/count"
-       async
-      src="//gc.zgo.at/count.js">
-    </script>
 
   </body>
 </html>
