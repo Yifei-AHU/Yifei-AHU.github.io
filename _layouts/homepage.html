@@ -461,7 +461,11 @@
 
         </h1>
 
-
+        {% if site.chinese_name %}
+        <div class="chinese-name">
+          {{ site.chinese_name }}
+        </div>
+        {% endif %}
 
         {% if site.position %}
 
