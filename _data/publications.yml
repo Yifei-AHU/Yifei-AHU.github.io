@@ -3,9 +3,10 @@ main:
   - title: Cross-modal Fuzzy Alignment Network for Text-Aerial Person Retrieval and A Large-scale Benchmark
     authors: <strong>Yifei Deng</strong>, Chenglong Li, Yuyang Zhang, Guyue Hu, Jin Tang
     conference_short: CVPR
-    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2026.
+    conference: IEEE/CVF Conference on Computer Vision and Pattern Recognition <strong>(CVPR)</strong>, 2026. 
     pdf: https://openaccess.thecvf.com/content/CVPR2026/papers/Deng_Cross-modal_Fuzzy_Alignment_Network_for_Text-Aerial_Person_Retrieval_and_A_CVPR_2026_paper.pdf
     code: https://github.com/Yifei-AHU/AERI-PEDES
+    notes: CCF-A
     image: ./assets/img/cvpr2026_cfan.png
 
   - title: Cross-Modal Person Retrieval With One-to-Many Relation Modeling
@@ -14,6 +15,7 @@ main:
     conference: IEEE Transactions on Information Forensics and Security <strong>(TIFS)</strong>, 2026.
     pdf: https://doi.org/10.1109/TIFS.2026.3689714
     code: https://github.com/Yifei-AHU/OMRE
+    notes: CCF-A
     image: ./assets/img/tifs2026_omre.png
 
   - title: Decoupled Cross-Modal Alignment Network for Text-RGBT Person Retrieval and A High-Quality Benchmark
@@ -22,14 +24,15 @@ main:
     conference: Information Fusion <strong>(INFFUS)</strong>, 2026.
     pdf: https://doi.org/10.1016/j.inffus.2025.103948
     code: https://github.com/Yifei-AHU/RGBT-PEDE
+    notes: CAAI-A
     image: ./assets/img/inffus2026_dcalign.png
 
   - title: Learning Hierarchical Cross-modal Association with Intra-modal Context for Text-Image Person Retrieval
     authors: <strong>Yifei Deng</strong>, Chenglong Li, Futian Wang, Jin Tang
     conference_short: ACM MM
-    conference: ACM International Conference on Multimedia <strong>(ACM MM)</strong>, 2025.
+    conference: ACM International Conference on Multimedia <strong>(ACM MM)</strong>, 2025. 
     pdf: https://doi.org/10.1145/3746027.3754721
-    notes: Oral Presentation
+    notes: CCF-A (Oral Presentation) 
     image: ./assets/img/acmmm2025_hca.png
 
   - title: Text-Visible/Infrared Person Retrieval - Attribute-Guided Feature Decoupling and Collaborative Alignment and a Unified Benchmark
@@ -37,6 +40,7 @@ main:
     conference_short: TIP
     conference: IEEE Transactions on Image Processing <strong>(TIP)</strong>, 2026.
     pdf: https://doi.org/10.1109/TIP.2026.3691012
+    notes: CCF-A
     image: ./assets/img/tip2026_acanet.png
 
   - title: Dual-Teacher Interactive Knowledge Distillation Network for Text-to-Visible & Infrared Person Retrieval
@@ -44,6 +48,7 @@ main:
     conference_short: AAAI
     conference: AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong>, 2026.
     pdf: https://ojs.aaai.org/index.php/AAAI/article/download/37527/41489
+    notes: CCF-A
     image: ./assets/img/aaai2026_dikdnet.png
 
   - title: Collaborative License Plate Recognition via Association Enhancement Network With Auxiliary Learning and a Unified Benchmark
@@ -51,4 +56,5 @@ main:
     conference_short: TMM
     conference: IEEE Transactions on Multimedia <strong>(TMM)</strong>, 2024.
     pdf: https://doi.org/10.1109/TMM.2024.3452982
+    notes: CCF-A
     image: ./assets/img/tmm2024_clpr.png
