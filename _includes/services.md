@@ -12,7 +12,8 @@
 <h4 style="margin:0 10px 0;">Journal Reviewers</h4>
 
 <ul style="margin:0 0 20px;">
-  <li><autocolor>IEEE Transactions on Intelligent Transportation Systems (T-ITS)</autocolor></li>
+  <li><autocolor>IEEE Transactions on Image Processing (TIP)</autocolor></li>
+  <li><autocolor>IEEE Transactions on Intelligent Transportation Systems (TITS)</autocolor></li>
   <li><autocolor>Pattern Recognition (PR)</autocolor></li>
   <li><autocolor>Pattern Recognition Letters (PRL)</autocolor></li>
 </ul>
