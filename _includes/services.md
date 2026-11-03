@@ -15,5 +15,6 @@
   <li><autocolor>IEEE Transactions on Image Processing (TIP)</autocolor></li>
   <li><autocolor>IEEE Transactions on Intelligent Transportation Systems (TITS)</autocolor></li>
   <li><autocolor>Pattern Recognition (PR)</autocolor></li>
+  <li><autocolor>Visual Intelligence (VI)</autocolor></li>
   <li><autocolor>Pattern Recognition Letters (PRL)</autocolor></li>
 </ul>
