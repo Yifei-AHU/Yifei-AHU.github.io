@@ -17,6 +17,7 @@ layout: homepage
 
 ## News
 
+- **[Nov. 2026]** I am honored to be selected for the **2026 Outstanding Doctoral Dissertation Incentive Program** of the **Anhui Robotics Society**（2026年度安徽省机器人学会优秀博士学位论文激励计划）([Official Announcement](https://ahrobotsoc.ustc.edu.cn/profile/ueditor/2026/11/09/93ace9b6-ccb4-424a-a0c9-8cc0eff868ee/%E9%99%84%E4%BB%B65.%20%E4%BC%98%E7%A7%80%E5%8D%9A%E5%A3%AB%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%E6%BF%80%E5%8A%B1%E8%AE%A1%E5%88%92.pdf)).
 - **[Feb. 2026]** Our paper about Aerial Cross-modal Person Retrieval is accepted to **CVPR 2026**.
 - **[May. 2026]** Our paper about Cross-modal Person Retrieval is published in **TIFS 2026**.
 - **[Mar. 2026]** Our paper about Cross-modal Person Retrieval is published in **INFFUS 2026**.
